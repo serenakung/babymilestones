@@ -156,20 +156,16 @@ footer {
     padding: 8px;
 }
 
-/* Hide the milestones table by default */
+/* General styling for the milestones table container */
 #milestone-table-container {
     display: none; /* Hide the table container initially */
-}
-
-/* Style the milestones table container */
-#milestone-table-container.visible {
-    display: block; /* Show the table container when it has the "visible" class */
     max-width: 80%; /* Limit the table's width to 80% of the screen */
     margin: 20px auto; /* Center the table and add spacing above and below */
     padding: 10px; /* Add padding around the table */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better appearance */
     background-color: #ffffff; /* Ensure the container has a white background */
     border-radius: 8px; /* Add rounded corners to the container */
+    overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
 }
 
 /* Style the milestones table */
@@ -331,16 +327,22 @@ footer {
     #milestone-table-container {
         max-width: 95%; /* Use almost full width on smaller screens */
         padding: 5px; /* Reduce padding for smaller screens */
+        overflow-x: auto; /* Add horizontal scrolling for very small screens */
     }
 
     #milestone-table {
-        width: 95%; /* Use almost full width on smaller screens */
+        width: 100%; /* Ensure the table fits within the container */
         margin: 10px auto; /* Add smaller margins for narrow screens */
-        padding: 5px; /* Reduce padding for smaller screens */
     }
 
     #milestone-table th,
     #milestone-table td {
         padding: 6px; /* Reduce padding inside cells for smaller screens */
+        font-size: 12px; /* Adjust font size for better readability */
+    }
+
+    #milestone-table th:nth-child(2),
+    #milestone-table td:nth-child(2) {
+        text-align: center; /* Center-align the "Age (Months)" column */
     }
 }
