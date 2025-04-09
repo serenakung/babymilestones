@@ -168,6 +168,10 @@ footer {
     overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
 }
 
+#milestone-table-container.visible {
+    display: block; /* Show the table container when it has the "visible" class */
+}
+
 /* Style the milestones table */
 #milestone-table {
     width: 100%; /* Ensure the table takes up the full width of the container */
